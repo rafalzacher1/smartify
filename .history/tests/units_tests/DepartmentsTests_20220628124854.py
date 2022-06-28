@@ -1,0 +1,9 @@
+from django.test import TestCase
+
+
+class DepartmentsTests(TestCase):
+    def setUp(self):
+        """"""
+
+    def get_departments_from_instatute(self):
+        ""    
