@@ -16,3 +16,6 @@ class MembersTests(TestCase):
 
     def get_members_from_instatute(self):
         """"""
+
+    def get_members_information(self):
+        """"""    
