@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'app',
     'pages',
     'database',
-    'debug_toolbar'
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
