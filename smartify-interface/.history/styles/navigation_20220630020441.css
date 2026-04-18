@@ -1,0 +1,8 @@
+#navigation-container {
+  font-family: "Baloo Bhai";
+  font-size: 26px;
+  background: hwb(227 13% 2% / 0.6);
+  border-radius: 24px;
+  width: 200px;
+  height: 1000px;
+}

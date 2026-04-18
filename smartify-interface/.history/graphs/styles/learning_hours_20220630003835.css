@@ -1,0 +1,35 @@
+.learning-hours-container {
+  position: relative;
+  width: 40vw;
+}
+
+#stats-options {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Baloo Bhai';
+  font-size: 16px;
+}
+
+.stat-option, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+    font-family: 'Baloo Bhai';
+  font-size: 16px;
+}
+
+#stats-options h3:nth-of-type(1) {
+    flex-grow: 1;
+  }
+  #stats-options h3:nth-of-type(2) {
+    flex-grow: 1;
+  }
+  #stats-options h3:nth-of-type(3) {
+    flex-grow: 3;
+    text-align: right;
+  }

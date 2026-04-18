@@ -1,0 +1,26 @@
+.learning-hours-container {
+  position: relative;
+  width: 40vw;
+}
+
+#stats-options {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Baloo Bhai";
+  font-size: 16px;
+}
+
+.stat-option,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: 30%;
+  font-family: "Baloo Bhai";
+  font-size: 18px;
+}

@@ -1,0 +1,67 @@
+#tests-container {
+  grid-column: 2;
+  grid-row: 2 / 5;
+}
+
+#tests-container h2 {
+    font-family: "Baloo Bhai";
+    font-size: 32px;
+  }
+
+#test-options {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Baloo Bhai";
+  font-size: 16px;
+}
+
+.test-option,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: 30%;
+  font-family: "Baloo Bhai";
+  font-size: 18px;
+}
+
+.class {
+    background-color: #D0D0D3;
+    height: 120px;
+    width: 100%;
+    border-radius: 14px;
+    position: relative;
+}
+
+.class-info-container {
+    display: inline-block;
+    text-align: center;
+    height: 80px;
+    margin: 20px;
+}
+
+.class-image {
+    display: inline-block;
+    background-color: #FFFFFF;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    border-radius: 12px;
+}
+
+.class-info {
+    /* display: inline-block; */
+}
+
+.class-time-spent {
+    /* display: inline-block; */
+}
+
+.class-subtopics {
+display: inline-block;
+}

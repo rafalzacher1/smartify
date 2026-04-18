@@ -1,0 +1,6 @@
+#topic-teacher-container {
+  grid-column: 3;
+  grid-row: 2 / 5;
+  background-color: #d0d0d3;
+  border-radius: 14px;
+}

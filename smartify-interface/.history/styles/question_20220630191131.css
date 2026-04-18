@@ -1,0 +1,6 @@
+#question-container {
+  grid-column: 2 / 4;
+  grid-row: 2 / 5;
+  background-color: #d0d0d3;
+  border-radius: 14px;
+}

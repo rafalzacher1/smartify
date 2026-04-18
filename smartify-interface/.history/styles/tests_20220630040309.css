@@ -1,0 +1,44 @@
+#tests-container {
+  grid-column: 2;
+  grid-row: 2 / 5;
+}
+
+#tests-container h2 {
+    font-family: "Baloo Bhai";
+    font-size: 32px;
+  }
+
+#test-options {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Baloo Bhai";
+  font-size: 16px;
+}
+
+.test-option,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: 30%;
+  font-family: "Baloo Bhai";
+  font-size: 18px;
+}
+
+.class {
+    background-color: black;
+    height: 120px;
+    border-radius: 25px;
+}
+
+.class-image {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    border-
+}

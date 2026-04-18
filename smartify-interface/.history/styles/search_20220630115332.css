@@ -1,0 +1,9 @@
+#search-container {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#search-container h2 {
+  font-family: "Baloo Bhai";
+  font-size: 32px;
+}

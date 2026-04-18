@@ -1,0 +1,48 @@
+#search-container {
+  grid-column: 3;
+  grid-row: 0.5;
+}
+
+#search-container h2 {
+  font-family: "Baloo Bhai";
+  font-size: 16px;
+}
+
+form.example input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 70%;
+  background: #f1f1f1;
+  border-radius: 15px 0 0 15px;
+  font-family: "Baloo Bhai";
+  font-size: 32px;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2050fb;
+  opacity: 0.6;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+  font-family: "Baloo Bhai";
+  font-size: 32px;
+  box-sizing: border-box;
+}
+
+form.example button:hover {
+  opacity: 1;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}

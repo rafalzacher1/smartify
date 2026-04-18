@@ -1,0 +1,7 @@
+#search-container {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: black;
+}
+
+#search

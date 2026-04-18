@@ -1,0 +1,27 @@
+#test-container {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  background-color: #d0d0d3;
+  border-radius: 14px;
+}
+
+#test-container h1 {
+  font-family: "Baloo Bhai";
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+#test-container p {
+  color: #2050fb;
+  font-family: "Baloo Bhai";
+  font-size: 16px;
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+#test-container-header {
+  text-align: center;
+  
+  margin-top: auto;
+  margin-bottom: top;
+}

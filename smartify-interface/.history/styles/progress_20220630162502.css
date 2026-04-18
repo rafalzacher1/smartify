@@ -1,0 +1,37 @@
+#progress-container {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.progress {
+  width: 40%;
+  height: 100px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  text-align: center;
+  display: inline-block;
+  border-radius
+}
+
+.progress h1 {
+  font-family: "Baloo Bhai";
+  font-size: 64px;
+  color: #2050fb;
+  margin: 0;
+  width: 50%;
+  float: left;
+}
+
+.progress p {
+  margin: 25px 0;
+  font-family: "Baloo Bhai";
+  font-size: 16px;
+  text-align: left;
+  width: 50%;
+  float: right;
+}

@@ -1,0 +1,47 @@
+.learning-hours-container {
+  position: relative;
+  width: 40vw;
+}
+
+#stats-options {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Baloo Bhai";
+  font-size: 16px;
+}
+
+.stat-option,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: 30%;
+  font-family: "Baloo Bhai";
+  font-size: 18px;
+}
+
+#graphs {
+
+}
+
+.styled select {
+    background: transparent;
+    width: 150px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    height: 34px;
+  }
+  .styled {
+    margin: 50px;
+    width: 120px;
+    height: 34px;
+    border: 1px solid #111;
+    border-radius: 3px;
+    overflow: hidden;
+    background: url(https://stackoverflow.com/favicon.ico) 96% / 20% no-repeat #EEE;
+  }

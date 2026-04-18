@@ -1,0 +1,29 @@
+#navigation-container {
+  font-family: "Baloo Bhai";
+  font-size: 26px;
+  background: rgb(32, 80, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 74, 233, 0.8) 0%,
+    rgba(10, 10, 180, 0.9) 50%,
+    rgba(32, 80, 251, 0.8) 100%
+  );
+  border-radius: 24px;
+  width: 200px;
+  height: 1000px;
+  text-align: center;
+  margin: 40px;
+}
+
+#navigation-container h1 {
+  font-family: "Baloo Bhai";
+  font-size: 128px;
+  color: #ffffff;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+#navigation-options {
+    display: block;
+}

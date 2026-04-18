@@ -1,0 +1,6 @@
+#user-header {
+    border: solid black 2px;
+    width: 50%;
+    height: 200px;
+    display: inline-block;
+}

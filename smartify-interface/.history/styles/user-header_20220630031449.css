@@ -1,0 +1,5 @@
+#user-header-container {
+    grid-column: 2 /3;
+    grid-row: 1;
+    background-color: black;
+}

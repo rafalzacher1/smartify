@@ -1,0 +1,11 @@
+#user-header-container {
+    margin: 40px;
+    padding: 80px;
+    display: inline-block;
+}
+
+#user-header {
+    border: solid black 2px;
+    width: 50%;
+    height: 200px;
+}

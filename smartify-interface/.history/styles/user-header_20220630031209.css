@@ -1,0 +1,5 @@
+#user-header-container {
+    margin-top: 100px;
+    display: inline-block;
+    grid-column: 2 / 4;
+}

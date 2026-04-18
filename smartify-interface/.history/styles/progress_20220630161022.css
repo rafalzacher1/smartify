@@ -1,0 +1,13 @@
+#progress-container {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.progress {
+    width: 50px;
+    
+}

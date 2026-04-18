@@ -1,0 +1,7 @@
+#progress-container {
+    grid-column: 1;
+  grid-row: 0.5;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}

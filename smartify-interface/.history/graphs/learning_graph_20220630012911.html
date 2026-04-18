@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="./styles/learning_hours.css">
+    <link href='https://fonts.googleapis.com/css?family=Baloo Bhai' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="stats-container">
+        <div class="stats-options-container">
+            <h2>Stats</h2>
+
+            <div id="stats-options">
+                <button id="learning-hours-option" class="stat-option" onclick="showLearningHoursGraph()">Learning Hours</button>
+                <button id="tests-option" class="stat-option" onclick="showTestsGraph()" style="opacity: 0.4;">My Tests</button>
+
+                <select id="graphs">
+                    <option value="">This Week</option>
+                    <option value="">This Month</option>
+                </select>
+            </div>
+        </div>
+
+        <canvas id="learning-hours"></canvas>
+        <canvas id="tests" style="display: none"></canvas>
+    </div>
+
+    <script src="./scripts/learningHours.js"></script>
+    <script src="./scripts/tests.js"></script>
+</body>
+
+<script>
+    function showLearningHoursGraph() {
+        document.getElementById("learning-hours-option").style.display="block";
+        document.getElementById("learning-hours").style.display="block";
+        document.getElementById("tests").style.display="none";
+    }
+
+    function showTestsGraph() {
+        document.getElementById("learning-hours").style.display="none";
+        document.getElementById("tests").style.display="block";
+    }
+</script>
+
+</html>

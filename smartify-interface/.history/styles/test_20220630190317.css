@@ -1,0 +1,6 @@
+#test-container {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  background-color: #d0d0d3;
+  border-radius: 14px;
+}

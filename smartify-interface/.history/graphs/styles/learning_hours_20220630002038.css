@@ -1,0 +1,13 @@
+.learning-hours-container {
+    position: relative;
+    width:40vw
+}
+
+.stats-options {
+  display: flex;
+  justify-content:space-between;
+}
+
+.graphs {
+
+}

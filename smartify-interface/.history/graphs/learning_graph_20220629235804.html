@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <div class="chart-container" style="position: relative; width:40vw">
+        <canvas id="learning_hours"></canvas>
+    </div>
+    <script>
+        // Data define for bar chart
+        var learningData = {
+            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            fontColor: "blue",
+            datasets: [{
+                label: "Hey, baby!",
+                fill: false,
+                borderColor: '#2050FB',
+                data: [0, 1.5, 2.5, 1, 4, 3, 4],
+            }]
+        };
+        // Options to display value on top of bars
+        var learningOption = {
+            legend: { display: false },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    }
+                }]
+            },
+            tooltips: {
+                enabled: true
+            },
+            hover: {
+                animationDuration: 1
+            },
+            animation: {
+                duration: 1,
+                onComplete: function () {
+                    var chartInstance = this.chart,
+                        ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                    ctx.textBaseline = 'bottom';
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                        });
+                    });
+                }
+            }
+        };
+        //Code to drow Chart
+        var ctx = document.getElementById('learning_hours').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',    	// Define chart type
+            data: learningData,    	// Chart data
+            options: learningOption 	// Chart Options [This is optional paramenter use to add some extra things in the chart].
+        });
+    </script>
+</body>
+
+</html>

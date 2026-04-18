@@ -1,0 +1,4 @@
+#search-container {
+    grid-column: 5 / 3;
+    grid-row: 1;
+}
