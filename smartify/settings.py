@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -81,17 +82,28 @@ WSGI_APPLICATION = 'smartify.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+#
+# Default: MySQL (needs a running server and database "smartify"). For local dev without MySQL:
+#   SMARTIFY_USE_SQLITE=1 pipenv run python manage.py migrate
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'smartify',
-        'USER': 'root',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '3306',
+if os.environ.get("SMARTIFY_USE_SQLITE"):
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.mysql",
+            "NAME": "smartify",
+            "USER": "root",
+            "PASSWORD": "admin",
+            "HOST": "127.0.0.1",
+            "PORT": "3306",
+        }
+    }
 
 
 # Password validation

@@ -1,2 +1,14 @@
-/.history
-/.vscode
+# Editor local history (do not commit)
+**/.history/
+
+# IDE
+/.vscode/
+
+# Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Local DB
+db.sqlite3
+*.sqlite3
