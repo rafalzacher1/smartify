@@ -1,16 +1,18 @@
 # Smartify
 
-Django backend for an **UpReach bootcamp** learning-platform exercise: courses, lessons, members, questions, and related MySQL-backed models. A **static HTML/CSS/JS** UI prototype lives under `smartify-interface/` (served separately or integrated later).
+## Description
 
-## Requirements
+**Django** backend for an **UpReach bootcamp** learning-platform exercise: courses, lessons, members, questions, and related **MySQL**-backed models. A **static HTML/CSS/JS** prototype lives in `smartify-interface/` (preview separately or integrate later).
+
+## Prerequisites
 
 - **Python 3.12** (see `Pipfile`)
-- **Pipenv** (`pip install pipenv` or your OS package)
-- **MySQL 8** (optional if you use SQLite for local dev)
-- **Build deps for `mysqlclient`** on Linux, e.g.  
+- **Pipenv** (`pip install pipenv` or OS package)
+- **MySQL 8** for the full LMS schema (optional: SQLite-only for partial Django dev — see below)
+- On Linux, build deps for **`mysqlclient`**, e.g.  
   `sudo apt install default-libmysqlclient-dev pkg-config build-essential`
 
-## Setup
+## Installation
 
 From the repository root:
 
@@ -18,62 +20,65 @@ From the repository root:
 pipenv install
 ```
 
-Create a MySQL database named `smartify` if you use MySQL (user/password/host match `smartify/settings.py` or change them there).
+### MySQL database
 
-### LMS tables (MySQL)
+Create a database named `smartify` (or match the name in `smartify/settings.py`).
 
-App models under `database/` use **`managed = False`** — Django migrations do **not** create those tables. For a full schema plus demo data:
+App models under `database/` use **`managed = False`** — Django migrations do **not** create those tables. Load schema and demo data:
 
 ```bash
 mysql -u root -p smartify < database/schema.sql
 ```
 
-Demo login for `/login/`: **username** `test`, **password** `test` (see seed in `schema.sql`).
+Demo login for `/login/`: **username** `test`, **password** `test` (see `schema.sql`).
 
-### SQLite (no MySQL)
+### SQLite-only (limited)
 
 ```bash
 export SMARTIFY_USE_SQLITE=1
 pipenv run python manage.py migrate
 ```
 
-Only Django’s built-in apps get tables; the LMS tables above are still MySQL-oriented if you use raw SQL against `members`, etc.
+Only Django’s own apps get tables; LMS tables remain oriented toward MySQL if you rely on raw SQL.
 
-## Run the dev server
+## Usage
 
 ```bash
 pipenv run python manage.py runserver
 ```
 
-- App: **http://127.0.0.1:8000/**
-- Admin: **http://127.0.0.1:8000/admin/**
-- Django Debug Toolbar: **http://127.0.0.1:8000/__debug__/**
+| URL | Purpose |
+|-----|---------|
+| http://127.0.0.1:8000/ | App |
+| http://127.0.0.1:8000/admin/ | Django admin |
+| http://127.0.0.1:8000/__debug__/ | Debug Toolbar (if enabled) |
 
-## Project layout
-
-| Path | Role |
-|------|------|
-| `smartify/` | Django project settings, URLs |
-| `pages/` | Views and templates for the thin web UI |
-| `database/` | ORM models mapping existing MySQL tables (`managed = False`), `schema.sql` |
-| `app/` | Placeholder app |
-| `smartify-interface/` | Static frontend prototype (`index.html`, styles, scripts) |
-
-### Preview `smartify-interface` only
-
-From `smartify-interface/`:
+### Static UI only (`smartify-interface/`)
 
 ```bash
+cd smartify-interface
 python3 -m http.server 8080
 ```
 
-Open **http://127.0.0.1:8080/** — this does not run Django; it is for static files only.
+Open http://127.0.0.1:8080/ — static files only, **not** Django.
 
-## Configuration notes
+## Project structure
 
-- **Database:** Default MySQL settings use `HOST` **127.0.0.1** (TCP). Adjust `USER` / `PASSWORD` / `NAME` in `smartify/settings.py` for your environment.
-- **Security:** Sample code uses **raw SQL** in places (e.g. login) for teaching; do not use as-is in production.
+| Path | Role |
+|------|------|
+| `smartify/` | Django settings, URLs |
+| `pages/` | Views and templates |
+| `database/` | ORM models (`managed = False`), `schema.sql` |
+| `app/` | Placeholder app |
+| `smartify-interface/` | Static frontend prototype |
 
-## License / origin
+## Configuration
 
-Course project material; use and deployment are your responsibility.
+- Adjust MySQL `USER` / `PASSWORD` / `HOST` / `NAME` in `smartify/settings.py` for your machine.
+- Sample code may use raw SQL for teaching; do not deploy as-is to production.
+
+## Stack
+
+- **Backend:** Django, Python 3.12  
+- **Database:** MySQL (primary), optional SQLite for dev  
+- **Frontend prototype:** HTML, CSS, JS in `smartify-interface/`
